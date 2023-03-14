@@ -6,16 +6,15 @@
     --primary: #002857;
     --accents: #6395d7d3;
     --accentsDark: #019D2D;
-    --secondary: #EADECD;
     --gray: #C3C1C0;
     --white: #FFFAF4;
     --black: #000000;
+    --text: #18191F;
     --headingsFont: 'Playfair Display', serif;
     --bodyFonts: 'Montserrat', sans-serif;
     --transitions: .3s linear;
     --fontSize: 18px;
     --lineHeight: 32px;
-    --text: #18191F;
 }
 
 html {
@@ -59,6 +58,10 @@ body {
 
 img {
     max-width: 100%;
+}
+
+h2, h3, h4, h5, h6 {
+    color: var(--primary);
 }
 
 .hr {
@@ -153,7 +156,7 @@ header article div:first-child h1 span {
     font-size: 110px;
     display: block;
     padding: 10px 0;
-    
+
 }
 
 header article div:last-child {
@@ -275,43 +278,43 @@ header article div:last-child {
     padding: 25px 0;
 }
 
-/* slider */
+/* IMAGE slider */
 .carousel {
     width: 100vw;
     height: 100vh;
     position: relative;
-  }
-  
-  .carousel ul {
+}
+
+.carousel ul {
     margin: 0;
     padding: 0;
     list-style: none;
-  }
-  
-  .slide {
+}
+
+.slide {
     position: absolute;
     inset: 0;
     opacity: 0;
     transition: var(--transitions);
     transition-delay: 200ms;
-  }
-  
-  .slide img {
+}
+
+.slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     overflow: hidden;
-  }
-  
-  .slide[data-active] {
+}
+
+.slide[data-active] {
     opacity: 1;
     z-index: 1;
     transition-delay: 0ms;
-  }
-  
-  .carousel-button {
+}
+
+.carousel-button {
     position: absolute;
     z-index: 2;
     background: none;
@@ -324,30 +327,30 @@ header article div:last-child {
     border-radius: .25rem;
     padding: 0.6rem;
     background-color: rgba(0, 0, 0, .1);
-  }
-  
-  .carousel-button:hover,
-  .carousel-button:focus {
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
     color: white;
     background-color: rgba(0, 0, 0, .2);
-  }
-  
-  .carousel-button:focus {
+}
+
+.carousel-button:focus {
     outline: 1px solid black;
-  }
-  
-  .carousel-button.next {
+}
+
+.carousel-button.next {
     right: 0.5rem;
     border: none;
-  }
+}
 
-  .customSlider {
+.customSlider {
     position: relative;
     overflow: hidden;
-  }
-  
+}
 
-  .customSlider h2 {
+
+.customSlider h2 {
     position: absolute;
     top: 0;
     right: 5%;
@@ -355,21 +358,69 @@ header article div:last-child {
     color: var(--white);
     text-shadow: 2px 4px rgba(12, 12, 12, 0.4);
     font-size: 56px;
-    
-  }
 
-  .customSlider h2 {
+}
+
+.customSlider h2 {
     display: flex;
     justify-content: center;
     padding: 45px 0;
-  }
+}
+
+/* Our awards */
+.ourAwards {
+    background-image: url(./img/bcgr.png);
+    background-size: cover;
+    border-bottom: 1px solid var(--primary);
+}
+
+.ourAwards h2,
+p {
+    display: flex;
+    justify-content: center;
+}
+
+.ourAwards h2 {
+    font-size: 36px;
+    color: var(--primary);
+    /* margin-top: 40px; */
+}
+
+.awards {
+    padding: 100px 10px;
+}
+
+.ourAwards p:last-child {
+    padding: 55px 35px;
+    text-align: center;
+    font-size: 22px;
+    color: var(--primary);
+    font-style: italic;
+}
+
+
+.ourAwards h2 {
+    padding-top: 60px;
+}
+
+.awards {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Contact Form */
+.logoContact img {
+    border-radius: 70px 0 70px 0;
+    opacity: 0.7;
+}
+
 .form {
     padding: 80px 0;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255,255,255, 0.7)), url(./img/bcgr.png);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)), url(./img/bcgr.png);
     background-size: cover;
 }
+
 .form img {
     width: 550px;
 }
@@ -402,11 +453,11 @@ form input:last-child {
     border: none;
     outline: none;
     border-bottom: 3px solid var(--primary);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
 }
 
 .ourForm:focus {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .ourForm::placeholder {
@@ -424,7 +475,7 @@ form input:last-child {
     justify-content: center;
     align-items: center;
 
-}  
+}
 
 .form article div img {
     width: 90%;
@@ -445,6 +496,7 @@ form input:last-child {
     display: flex;
 }
 
+
 .footer article:first-child img {
     width: 220px;
     opacity: 0.5;
@@ -460,7 +512,7 @@ form input:last-child {
 
 .footer article:first-child ul li a {
     color: var(--white);
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .footer article:first-child ul li a:hover {
@@ -495,6 +547,10 @@ footer img {
 
 .findUs {
     display: flex;
+}
+
+.findUs h5 {
+    color: var(--white);
 }
 
 .findUs div {
@@ -541,17 +597,3 @@ footer img {
     opacity: 1;
     z-index: 98;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
