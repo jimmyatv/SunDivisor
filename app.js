@@ -1,3 +1,5 @@
+//! Manual image slider
+
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
 buttons.forEach(button => {
@@ -15,4 +17,16 @@ buttons.forEach(button => {
     slides.children[newIndex].dataset.active = true
     delete activeSlide.dataset.active
   })
-})
+});
+
+//? Back to top
+
+const toTop = document.querySelector('.to-top');
+
+window.addEventListener('scroll', () => {
+  if(window.pageYOffset > 100) {
+    toTop.classList.add('active');
+  } else {
+    toTop.classList.remove('active');
+  }
+});
