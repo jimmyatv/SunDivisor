@@ -25,6 +25,7 @@ buttons.forEach(button => {
 //? Back to top
 
 const toTop = document.querySelector('.to-top');
+const headerNav = document.querySelector('.headerNav');
 
 window.addEventListener('scroll', () => {
   if(window.pageYOffset > 100) {
@@ -32,4 +33,9 @@ window.addEventListener('scroll', () => {
   } else {
     toTop.classList.remove('active');
   }
+
+  headerNav.classList.toggle('sticky', window.scrollY > 0);   // fixed navBar
+
+
 });
+

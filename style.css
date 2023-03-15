@@ -12,7 +12,7 @@
     --text: #18191F;
     --headingsFont: 'Playfair Display', serif;
     --bodyFonts: 'Montserrat', sans-serif;
-    --transitions: .3s linear;
+    --transitions: .4s linear;
     --fontSize: 18px;
     --lineHeight: 32px;
 }
@@ -73,6 +73,34 @@ h2, h3, h4, h5, h6 {
     border-radius: 25px;
 }
 
+
+/* ******************
+Sticky navBar 
+******************** */
+
+.headerNav.sticky {
+    background-color: var(--primary);
+    transition: .4s ease-in-out;
+    opacity: 0.9;
+}
+
+.headerNav.sticky ul li a {
+    color: var(--white);
+}
+
+.headerNav.sticky ul li a:hover {
+    color: var(--accentsDark);
+}
+
+.headerNav.sticky .icons a i {
+    color: var(--white);
+}
+
+.headerNav.sticky .icons a i:hover {
+    color: var(--accentsDark);
+}
+
+
 /* Header and NavBar */
 .burger {
     display: none;
@@ -83,6 +111,9 @@ h2, h3, h4, h5, h6 {
     justify-content: space-around;
     align-items: center;
     padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 }
 
 .headerNav img {
@@ -147,7 +178,7 @@ header article div:first-child h1 {
     text-shadow: 1px 4px rgba(0, 0, 0, 0.3);
     padding: 15px 0;
     font-weight: bold;
-    margin-top: 80px;
+    margin-top: 20%;
 }
 
 header article div:first-child h1 span {
@@ -532,6 +563,7 @@ form input:last-child {
 
 footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     background-image: url(./img/header2.jpg);
     padding: 80px 20px;
@@ -596,4 +628,8 @@ footer img {
     pointer-events: auto;
     opacity: 1;
     z-index: 98;
+}
+
+.to-top.active i:hover {
+    color: var(--accentsDark);
 }
