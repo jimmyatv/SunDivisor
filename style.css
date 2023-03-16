@@ -110,14 +110,14 @@ Sticky navBar
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 25px 0;
+    padding: 6px 0;
     position: fixed;
     width: 100%;
     z-index: 99;
 }
 
 .headerNav img {
-    width: 100px;
+    width: 90px;
     flex: 0 0 25%;
 }
 
@@ -311,9 +311,9 @@ header article div:last-child {
 
 /* IMAGE slider */
 .carousel {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
+    width: 77vw;
+    height: 80vh;
+    margin: auto;
 }
 
 .carousel ul {
@@ -350,13 +350,13 @@ header article div:last-child {
     z-index: 2;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 30px;
     top: 50%;
     transform: translateY(-50%);
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
-    border-radius: .25rem;
-    padding: 0.6rem;
+    border-radius: 12px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, .1);
 }
 
@@ -371,19 +371,19 @@ header article div:last-child {
 }
 
 .carousel-button.next {
-    right: 0.5rem;
+    right: 16px;
     border: none;
 }
 
 .customSlider {
     position: relative;
-    overflow: hidden;
+    padding: 50px 0;
 }
 
 
 .customSlider h2 {
     position: absolute;
-    top: 0;
+    top: 5%;
     right: 5%;
     z-index: 2;
     color: var(--white);
@@ -392,11 +392,6 @@ header article div:last-child {
 
 }
 
-.customSlider h2 {
-    display: flex;
-    justify-content: center;
-    padding: 45px 0;
-}
 
 /* Our awards */
 .ourAwards {
@@ -405,16 +400,14 @@ header article div:last-child {
     border-bottom: 1px solid var(--primary);
 }
 
-.ourAwards h2,
-p {
-    display: flex;
-    justify-content: center;
+.ourAwards h2, p {
+    text-align: center;
 }
 
 .ourAwards h2 {
     font-size: 36px;
     color: var(--primary);
-    /* margin-top: 40px; */
+    margin-bottom: ;
 }
 
 .awards {
@@ -518,13 +511,35 @@ form input:last-child {
 
 /* footer */
 
+.social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--accentsDark);
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    text-decoration: none; 
+    margin-right: 40px;
+    color: var(--white);
+    font-size: 24px;
+}
+
+.social a:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transition: .3s ease-out;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
-}
-
-.footer article:first-child {
-    display: flex;
 }
 
 
@@ -535,10 +550,11 @@ form input:last-child {
 
 .footer article:first-child ul {
     list-style: none;
+    text-transform: uppercase;
 }
 
 .footer article:first-child ul li {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .footer article:first-child ul li a {
@@ -551,48 +567,43 @@ form input:last-child {
     transition: var(--transitions);
 }
 
-.footer article {
-    flex: 0 0 45%;
-}
-
 .footer article:first-child {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 20%;
+}
+
+.footer article:first-child img {
+    width: 200px;
+    margin-right: 40px;
 }
 
 footer {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     background-image: url(./img/header2.jpg);
     padding: 80px 20px;
     border-top: 3px solid var(--accentsDark);
 }
 
-footer img {
-    width: 70px;
-    padding-bottom: 15px;
-}
-
-
-
 .findUs {
     display: flex;
+    width: 70%;
+}
+
+.findUs img {
+    width: 70px;
+    padding-bottom: 15px;
 }
 
 .findUs h5 {
     color: var(--white);
 }
 
-.findUs div {
-    margin-left: 15px;
-    color: var(--white);
-}
-
 .findUs div p {
     padding: 5px 0;
     font-size: 14px;
+    color: var(--white);
 }
 
 .findUs div a {
@@ -600,7 +611,8 @@ footer img {
 }
 
 .findUs div a:hover {
-    color: var(--white);
+    color: var(--gray);
+    transition: var(--transitions);
 }
 
 /* Up to top */
@@ -632,4 +644,5 @@ footer img {
 
 .to-top.active i:hover {
     color: var(--accentsDark);
+    transition: var(--transitions);
 }

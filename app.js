@@ -22,7 +22,7 @@ buttons.forEach(button => {
 
 
 
-//? Back to top
+//? Back to top and fixed navBar
 
 const toTop = document.querySelector('.to-top');
 const headerNav = document.querySelector('.headerNav');
