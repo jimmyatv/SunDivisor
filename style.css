@@ -60,7 +60,11 @@ img {
     max-width: 100%;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--primary);
 }
 
@@ -153,9 +157,15 @@ Sticky navBar
     transition: var(--transitions);
 }
 
+.input {
+    position: absolute;
+    top: 30%;
+}
+
 header {
     background-image: url(./img/header1.jpg);
     height: 100vh;
+    position: relative;
 
 }
 
@@ -169,8 +179,9 @@ header article div:first-child {
     display: flex;
     flex-direction: column;
     align-items: start;
-    flex: 0 0 70%;
+
 }
+
 
 header article div:first-child h1 {
     font-size: 80px;
@@ -178,13 +189,12 @@ header article div:first-child h1 {
     text-shadow: 1px 4px rgba(0, 0, 0, 0.3);
     padding: 15px 0;
     font-weight: bold;
-    margin-top: 20%;
 }
 
 header article div:first-child h1 span {
     color: var(--accentsDark);
     text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
-    font-size: 110px;
+    font-size: 100px;
     display: block;
     padding: 10px 0;
 
@@ -195,18 +205,15 @@ header article div:last-child {
 }
 
 /* Widget */
-.app-wrap {
-    position: relative;
-}
 
-.center {
+.app-wrap {
     position: absolute;
-    bottom: 15%;
-    left: 25%;
+    bottom: 35%;
+    left: 75%;
 }
 
 .header input {
-    width: 70%;
+    width: 100%;
     max-width: 280px;
     padding: 10px 15px;
     border: none;
@@ -274,17 +281,12 @@ header article div:last-child {
 }
 
 .activeTrades h2 {
-    display: flex;
-    justify-content: center;
     padding-bottom: 40px;
     font-size: 42px;
 }
 
 .cards div {
     width: calc(25% - 15px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     padding: 60px 20px;
 }
@@ -292,6 +294,10 @@ header article div:last-child {
 .cards div img {
     width: 60px;
     margin-bottom: 20px;
+}
+
+.cards .btn {
+    margin-bottom: 35px;
 }
 
 .cards div h3 {
@@ -305,9 +311,6 @@ header article div:last-child {
     align-items: center;
 }
 
-.activeTrades div:last-child {
-    padding: 25px 0;
-}
 
 /* IMAGE slider */
 .carousel {
@@ -400,14 +403,15 @@ header article div:last-child {
     border-bottom: 1px solid var(--primary);
 }
 
-.ourAwards h2, p {
+.ourAwards h2,
+p {
     text-align: center;
 }
 
 .ourAwards h2 {
     font-size: 36px;
     color: var(--primary);
-    margin-bottom: ;
+    padding-top: 60px;
 }
 
 .awards {
@@ -423,13 +427,10 @@ header article div:last-child {
 }
 
 
-.ourAwards h2 {
-    padding-top: 60px;
-}
-
 .awards {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
@@ -521,11 +522,11 @@ form input:last-child {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--accentsDark);
+    border: 1px solid var(--white);
     display: flex;
     justify-content: center;
-    align-items: center;  
-    text-decoration: none; 
+    align-items: center;
+    text-decoration: none;
     margin-right: 40px;
     color: var(--white);
     font-size: 24px;
@@ -540,6 +541,10 @@ form input:last-child {
 .footer {
     display: flex;
     justify-content: space-between;
+}
+
+.footer p {
+    text-align: start;
 }
 
 
@@ -645,4 +650,172 @@ footer {
 .to-top.active i:hover {
     color: var(--accentsDark);
     transition: var(--transitions);
+}
+
+
+/* Responsive  992px */
+@media screen and (max-width: 992px) {
+
+    /* header */
+    header article div:first-child h1 {
+        font-size: 50px;
+        margin-top: 20%;
+    }
+
+    header article div:first-child h1 span {
+        font-size: 75px;
+
+    }
+
+    .input {
+        top: 5%;
+    }
+
+    /* widget */
+    .app-wrap {
+        bottom: 10%;
+        left: 50%;
+    }
+
+    .header input {
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .current .temp {
+        font-size: 80px;
+
+    }
+
+    .current .weather {
+        font-size: 30px;
+    }
+
+    .current .hi-low {
+        font-size: 22px;
+    }
+}
+
+/* Responsive  768px */
+@media screen and (max-width: 768px) {
+
+    /* global */
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* navBar */
+    .headerNav a {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .headerNav i {
+        color: var(--primary);
+        font-size: 26px;
+        margin-left: 24px;
+    }
+
+    .icons {
+        margin-right: 25px;
+    }
+
+    .headerNav img {
+        width: 70px;
+    }
+
+    /* header */
+    header article div:first-child h1 {
+        font-size: 50px;
+    }
+
+    header article div:first-child h1 span {
+        font-size: 80px;
+    }
+
+    /* widget */
+    .app-wrap {
+        position: absolute;
+        bottom: 10%;
+        left: 55%;
+    }
+
+    .header input {
+        width: 80%;
+        font-size: 18px;
+        padding: 8px 13px;
+    }
+
+    .current .temp {
+        font-size: 78px;
+
+    }
+
+    .current .weather {
+        font-size: 28px;
+    }
+
+    .current .hi-low {
+        font-size: 20px;
+    }
+
+    /* btn */
+    .btn {
+        padding: 12px 22px;
+        background-color: var(--accentsDark);
+        border-radius: 22px;
+        font-size: 16px;
+    }
+
+    /* cards */
+
+    .cards div img {
+        width: 45px;
+        margin-bottom: 15px;
+    }
+
+    .cards div h3 {
+        margin-bottom: 10px;
+    }
+
+
+    /* gallery */
+    .customSlider h2 {
+        font-size: 32px;
+    }
+
+    /* our awards */
+    .awards div {
+        width: 33%;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .awards {
+        padding: 40px 10px;
+    }
+
+    /* footer */
+    .findUs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+
+    }
+
+    .findUs div {
+        width: 40%;
+    }
+
+    .footer article:first-child {
+        flex-direction: column;
+    }
 }
