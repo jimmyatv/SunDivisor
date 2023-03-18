@@ -1,4 +1,4 @@
-//! Manual image slider
+//? Manual image slider
 
 const buttons = document.querySelectorAll("[data-carousel-button]")
 
@@ -39,14 +39,15 @@ burger.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
   if(window.pageYOffset > 100) {
     toTop.classList.add('active');
-  } else {
-    toTop.classList.remove('active');
-  }
-  
+  } 
   if(window.pageYOffset > 0) {
     mobileNav.classList.remove('is-active');
-  }
+    burger.classList.remove('is-active');
+  } else {
+    toTop.classList.remove('active');
+  };
   
+
   headerNav.classList.toggle('sticky', window.scrollY > 0);   // fixed navBar
   
 
