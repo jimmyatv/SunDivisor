@@ -874,11 +874,11 @@ footer {
 
     /* header */
     .input {
-        top: 20%;
+        top: 10%;
     }
 
     .app-wrap {
-        bottom: 5%;
+        bottom: 8%;
     }
 
     .header input {
@@ -1069,7 +1069,14 @@ footer {
 
     #contact article {
         width: 80%;
+        display: flex;
+        justify-content: center;
     }
+
+    .logoContact {
+        display: none;
+    }
+
 
     #contact article form {
         width: 100%;
@@ -1228,15 +1235,6 @@ footer {
         margin-bottom: -30px;
     }
 
-    /* contact form */
-    .logoContact {
-        display: none;
-    }
-
-    .form article {
-        display: flex;
-        justify-content: center;
-    }
 
     /* footer */
 
