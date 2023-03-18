@@ -30,13 +30,10 @@ const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('.mobile-nav');
 
 
-
 burger.addEventListener('click', () => {
   burger.classList.toggle('is-active');
   mobileNav.classList.toggle('is-active');
 });
-
-
 
 
 window.addEventListener('scroll', () => {
@@ -45,9 +42,17 @@ window.addEventListener('scroll', () => {
   } else {
     toTop.classList.remove('active');
   }
-
+  
+  if(window.pageYOffset > 0) {
+    mobileNav.classList.remove('is-active');
+  }
+  
   headerNav.classList.toggle('sticky', window.scrollY > 0);   // fixed navBar
-
+  
 
 });
+
+
+
+
 
