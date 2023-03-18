@@ -829,7 +829,7 @@ footer {
     }
 
 
-    /* gallery */
+    /* gallery image slider */
     .customSlider h2 {
         font-size: 32px;
     }
@@ -1101,7 +1101,7 @@ footer {
         margin-right: 12px;
         text-transform: capitalize;
     }
-    
+
 
     .footer article:first-child img {
         position: absolute;
@@ -1125,6 +1125,132 @@ footer {
     }
 
 
+}
+
+/* responsive for Samsung S8+ , 360px */
+@media screen and (max-width: 360px) {
+
+    /* header */
+    header article div:first-child h1 {
+        font-size: 34px;
+        text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    header article div:first-child a {
+        margin: auto;
+    }
+
+    header article div:first-child h1 span {
+        font-size: 48px;
+        text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .header input {
+        font-size: 14px;
+    }
+    
+    /* btn */
+    .btn {
+        padding: 8px 18px;
+        background-color: var(--accentsDark);
+        border-radius: 18px;
+        font-size: 13px;
+    }
+
+    /* burger menu */
+    .mobile-nav a {
+        display: block;
+        width: 100%;
+        margin: auto;
+        max-width: 180px;
+        padding: 10px 14px;
+        border-radius: 26px;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    .input {
+        top: 15%;
+        right: 2%;
+    }
+
+    .app-wrap {
+        bottom: 6%;
+        left: 30%;
+    }
+
+    /* cards */
+    .activeTrades h2 {
+        font-size: 20px;
+    }
+
+    .cards div img {
+        width: 38px;
+        margin-bottom: 8px;
+    }
+
+    /* image slider */
+
+    .carousel-button.next {
+        right: 4px;
+    }
+    
+    .carousel-button.prev {
+        left: 4px;
+    }
+
+    .carousel-button {
+        font-size: 20px;
+        border-radius: 8px;
+        padding: 6px;
+    }
+
+    /* awards */
+
+    .awards {
+        padding: 10px 0;
+    }
+
+    .awards div {
+        width: 45%;
+        margin-top: 30px;
+    }
+
+    .ourAwards h2 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .cfd h2 {
+        padding: 35px 15px 0 15px;
+        margin-bottom: -30px;
+    }
+
+    /* contact form */
+    .logoContact {
+        display: none;
+    }
+
+    .form article {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* footer */
+
+    .findUs img {
+        width: 60px;
+    }
+
+    .findUs p {
+        font-size: 12px;
+    }
+
+    .findUs a {
+        font-size: 16px;
+    }
 
 
 }
