@@ -911,11 +911,11 @@ footer {
 
     /* header */
     .input {
-        top: 10%;
+        top: 12%;
     }
 
     .app-wrap {
-        bottom: 8%;
+        bottom: 10%;
     }
 
     .header input {
@@ -963,7 +963,7 @@ footer {
         margin-bottom: 5px;
         height: 4px;
         background-color: var(--primary);
-        border: 1px solid var(--black);
+        border: 1px solid var(--white);
         border-radius: 6px;
         transition: 0.6s;
         transform-origin: 0 0;
@@ -1026,16 +1026,16 @@ footer {
         transition: 0.6s;
     } */
 
-    .burger:hover span {
+    /* .burger:hover span {
         background-color: var(--accentsDark);
         transition: 0.6s;
-    }
+    } */
 
 
-    .burger.is-active:hover span {
+    /* .burger.is-active:hover span {
         background-color: var(--accentsDark);
         transition: 0.6s;
-    }
+    } */
 
     .burger.is-active span:nth-child(2) {
         transform: translateX(15px);
