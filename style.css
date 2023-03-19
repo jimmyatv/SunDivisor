@@ -73,14 +73,6 @@ h2 {
     font-size: 36px;
 }
 
-.hr {
-    width: 90%;
-    height: 3px;
-    background-color: var(--primary);
-    margin: auto;
-    margin-bottom: 25px;
-    border-radius: 25px;
-}
 
 hr {
     margin: 30px auto 10px;
@@ -118,6 +110,12 @@ Sticky navBar
 }
 
 
+nav.sticky span {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+}
+
+
 /* Header and NavBar */
 .burger {
     display: none;
@@ -127,7 +125,7 @@ Sticky navBar
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 8px 0;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -176,6 +174,10 @@ Sticky navBar
     top: 30%;
 }
 
+.input span {
+    display: block;
+}
+
 header {
     background-image: url(./img/header1.jpg);
     background-size: cover;
@@ -190,13 +192,6 @@ header article {
     justify-content: space-between;
 }
 
-
-header article div:first-child {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-
-}
 
 
 header article div:first-child h1 {
@@ -288,19 +283,20 @@ header article div:last-child {
 
 /* cards */
 .activeTrades {
-    padding: 80px 0;
+    text-align: center;
+    padding: 80px 15px;
 }
 
 .activeTrades hr {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 50px 0;
 }
-
 
 .cards div {
     width: calc(25% - 15px);
@@ -310,21 +306,11 @@ header article div:last-child {
 
 .cards div img {
     width: 60px;
-    margin-bottom: 20px;
 }
 
-.cards .btn {
-    margin-bottom: 35px;
-}
 
 .cards div h3 {
-    margin-bottom: 15px;
-}
-
-.activeTrades {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 15px 0;
 }
 
 
@@ -423,8 +409,7 @@ header article div:last-child {
     border-bottom: 1px solid var(--primary);
 }
 
-.ourAwards h2,
-p {
+.ourAwards h2, .ourAwards h3 {
     text-align: center;
 }
 
@@ -444,7 +429,7 @@ p {
 .ourAwards p:last-child {
     padding: 25px 25px;
     text-align: center;
-    font-size: 22px;
+    font-size: 16px;
     color: var(--primary);
     font-style: italic;
 }
@@ -485,12 +470,11 @@ p {
     text-align: center;
 }
 
-form textarea {
+form textarea::placeholder {
+    color: var(--primary);
     font-family: var(--bodyFonts);
     padding: 6px 0 0 15px;
-}
-form input::placeholder {
-    font-family: var(--bodyFonts);
+    font-weight: 700;
 }
 
 form input:last-child {
@@ -507,15 +491,17 @@ form input:last-child {
     border: none;
     outline: none;
     border-bottom: 3px solid var(--primary);
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--white);
 }
 
 .ourForm:focus {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .ourForm::placeholder {
     color: var(--primary);
+    font-weight: 700;
+    font-family: var(--bodyFonts);
 }
 
 .form article {
@@ -540,13 +526,17 @@ form input:last-child {
 }
 
 /* footer */
-
 .social {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    text-align: center;
+    padding-top: 35px;
 }
 
+/* positioning with function inline-block */
+.social i {
+   transform: translateY(24%);
+}
+
+/* positioning with function inline-block */
 .social a {
     width: 40px;
     height: 40px;
@@ -556,9 +546,11 @@ form input:last-child {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    margin-right: 40px;
+    margin: 0 10px;
     color: var(--white);
     font-size: 24px;
+    display: inline-block;
+    text-align: center;
 }
 
 .social a:hover {
@@ -615,7 +607,9 @@ form input:last-child {
 
 footer {
     flex-wrap: wrap;
-    background-image: url(./img/header2.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/header2.jpg);
+    background-position: center;
+    background-size: cover ;
     padding: 80px 20px;
     border-top: 3px solid var(--accentsDark);
 }
@@ -634,9 +628,6 @@ footer {
     color: var(--white);
 }
 
-.findUs div {
-    margin-right: 5px;
-}
 
 .findUs div p {
     padding: 5px 0;
@@ -687,7 +678,9 @@ footer {
 
 .byAlex {
     color: var(--white);
-    margin-top: 30px;
+    margin-top: 50px;
+    text-align: center;
+    
 }
 
 /* Responsive 1400px */
@@ -712,18 +705,20 @@ footer {
 /* Responsive  992px */
 @media screen and (max-width: 992px) {
 
-    /* header */
+    hr {
+        width: 220px;
+    }
+
     header article div:first-child h1 {
-        font-size: 50px;
+        font-size: 45px;
     }
 
     header article div:first-child h1 span {
-        font-size: 75px;
-
+        font-size: 60px;
     }
 
     .input {
-        top: 25%;
+        top: 15%;
     }
 
     /* widget */
@@ -770,6 +765,10 @@ footer {
 /* Responsive  768px */
 @media screen and (max-width: 768px) {
 
+    hr {
+        width: 150px;
+    }
+
     /* global */
     h2 {
         font-size: 28px;
@@ -801,15 +800,6 @@ footer {
 
     .headerNav img {
         width: 70px;
-    }
-
-    /* header */
-    header article div:first-child h1 {
-        font-size: 50px;
-    }
-
-    header article div:first-child h1 span {
-        font-size: 80px;
     }
 
     /* widget */
@@ -885,6 +875,7 @@ footer {
      /* global */
      h2 {
         font-size: 26px;
+        padding: 0 15px;
     }
 
     h3 {
@@ -893,7 +884,6 @@ footer {
 
     hr {
         margin: 20px auto 8px;
-        height: 2px;
         width: 120px;
     }
 
@@ -937,12 +927,12 @@ footer {
     }
 
     header article div:first-child h1 {
-        font-size: 40px;
+        font-size: 35px;
         text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     header article div:first-child h1 span {
-        font-size: 65px;
+        font-size: 55px;
         text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
     }
 
@@ -972,8 +962,8 @@ footer {
         width: 35px;
         margin-bottom: 5px;
         height: 4px;
-        background-color: var(--white);
-        border: 1px solid var(--black);
+        background-color: var(--primary);
+        border: 1px solid var(--white);
         border-radius: 6px;
         transition: 0.6s;
         transform-origin: 0 0;
@@ -1187,10 +1177,10 @@ footer {
 
     .footer article:first-child img {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 300px;
-        opacity: 0.1;
+        top: 2%;
+        left: 2%;
+        width: 250px;
+        opacity: 0.2;
         pointer-events: none;
     }
 
@@ -1202,9 +1192,6 @@ footer {
         position: relative;
     }
 
-    footer .social a {
-        margin: auto;
-    }
 
 
 }
@@ -1252,7 +1239,7 @@ footer {
     }
 
     .input {
-        top: 15%;
+        top: 10%;
         right: 2%;
     }
 
