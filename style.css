@@ -1224,6 +1224,10 @@ footer {
         font-size: 14px;
     }
 
+    .input {
+        text-align: center;
+    }
+
     /* btn */
     .btn {
         padding: 8px 18px;
