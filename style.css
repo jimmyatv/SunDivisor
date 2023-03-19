@@ -285,6 +285,7 @@ header article div:last-child {
 .activeTrades {
     text-align: center;
     padding: 80px 15px;
+    background-color: --wh;
 }
 
 .activeTrades hr {
@@ -304,8 +305,9 @@ header article div:last-child {
     padding: 20px 12px;
 }
 
-.cards div img {
-    width: 60px;
+.cards div i {
+    font-size: 55px;
+    color: var(--primary);
 }
 
 
@@ -342,6 +344,7 @@ header article div:last-child {
     object-fit: cover;
     object-position: center;
     overflow: hidden;
+    border-radius: 25px;
 }
 
 .slide[data-active] {
@@ -409,7 +412,8 @@ header article div:last-child {
     border-bottom: 1px solid var(--primary);
 }
 
-.ourAwards h2, .ourAwards h3 {
+.ourAwards h2,
+.ourAwards h3 {
     text-align: center;
 }
 
@@ -533,7 +537,7 @@ form input:last-child {
 
 /* positioning with function inline-block */
 .social i {
-   transform: translateY(24%);
+    transform: translateY(24%);
 }
 
 /* positioning with function inline-block */
@@ -607,9 +611,9 @@ form input:last-child {
 
 footer {
     flex-wrap: wrap;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/header2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/header2.jpg);
     background-position: center;
-    background-size: cover ;
+    background-size: cover;
     padding: 80px 20px;
     border-top: 3px solid var(--accentsDark);
 }
@@ -623,6 +627,7 @@ footer {
     width: 70px;
     padding-bottom: 15px;
 }
+
 
 .findUs h5 {
     color: var(--white);
@@ -680,7 +685,7 @@ footer {
     color: var(--white);
     margin-top: 50px;
     text-align: center;
-    
+
 }
 
 /* Responsive 1400px */
@@ -743,6 +748,11 @@ footer {
 
     .current .hi-low {
         font-size: 22px;
+    }
+
+    /* cards */
+    .cards div i {
+        font-size: 50px;
     }
 
     /* footer */
@@ -841,10 +851,6 @@ footer {
 
     /* cards */
 
-    .cards div img {
-        width: 45px;
-        margin-bottom: 15px;
-    }
 
     .cards div h3 {
         margin-bottom: 10px;
@@ -872,8 +878,8 @@ footer {
 
 @media screen and (max-width: 576px) {
 
-     /* global */
-     h2 {
+    /* global */
+    h2 {
         font-size: 26px;
         padding: 0 15px;
     }
@@ -915,7 +921,7 @@ footer {
     }
 
     .app-wrap {
-        bottom: 10%;
+        bottom: 5%;
     }
 
     .header input {
@@ -1051,10 +1057,6 @@ footer {
     }
 
     /* cards */
-    .cards div img {
-        width: 40px;
-        margin-bottom: 12px;
-    }
 
     .activeTrades {
         text-align: center;
@@ -1067,6 +1069,10 @@ footer {
     .cards div {
         width: calc(50% - 10px);
         /* border: 1px solid red; */
+    }
+
+    .cards div i {
+        font-size: 45px;
     }
 
     /* Image slider - gallery */
@@ -1089,7 +1095,7 @@ footer {
     .carousel-button.next {
         right: 4px;
     }
-    
+
     .carousel-button.prev {
         left: 4px;
     }
@@ -1217,7 +1223,7 @@ footer {
     .header input {
         font-size: 14px;
     }
-    
+
     /* btn */
     .btn {
         padding: 8px 18px;
@@ -1252,12 +1258,6 @@ footer {
     .activeTrades h2 {
         font-size: 20px;
     }
-
-    .cards div img {
-        width: 38px;
-        margin-bottom: 8px;
-    }
-
 
     /* awards */
 
