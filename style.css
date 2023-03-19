@@ -69,6 +69,10 @@ h6 {
     color: var(--primary);
 }
 
+h2 {
+    font-size: 36px;
+}
+
 .hr {
     width: 90%;
     height: 3px;
@@ -76,6 +80,14 @@ h6 {
     margin: auto;
     margin-bottom: 25px;
     border-radius: 25px;
+}
+
+hr {
+    margin: 30px auto 10px;
+    border: none;
+    height: 2px;
+    width: 250px;
+    background-color: var(--accentsDark);
 }
 
 
@@ -146,6 +158,7 @@ Sticky navBar
 }
 
 
+
 .headerNav i {
     color: var(--primary);
     font-size: 32px;
@@ -165,6 +178,8 @@ Sticky navBar
 
 header {
     background-image: url(./img/header1.jpg);
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     position: relative;
 
@@ -233,6 +248,7 @@ header article div:last-child {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+
 .location .city {
     color: var(--primary);
     font-size: 32px;
@@ -275,21 +291,21 @@ header article div:last-child {
     padding: 80px 0;
 }
 
+.activeTrades hr {
+    margin-bottom: 40px;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.activeTrades h2 {
-    padding-bottom: 20px;
-    font-size: 42px;
-}
 
 .cards div {
     width: calc(25% - 15px);
     text-align: center;
-    padding: 60px 20px;
+    padding: 20px 12px;
 }
 
 .cards div img {
@@ -302,7 +318,6 @@ header article div:last-child {
 }
 
 .cards div h3 {
-    font-style: italic;
     margin-bottom: 15px;
 }
 
@@ -397,7 +412,6 @@ header article div:last-child {
     z-index: 2;
     color: var(--white);
     text-shadow: 2px 4px rgba(12, 12, 12, 0.4);
-    font-size: 56px;
 
 }
 
@@ -415,7 +429,6 @@ p {
 }
 
 .ourAwards h2 {
-    font-size: 36px;
     color: var(--primary);
     padding-top: 60px;
 }
@@ -424,8 +437,12 @@ p {
     padding: 100px 10px;
 }
 
+.ourAwards hr {
+    margin-bottom: 30px;
+}
+
 .ourAwards p:last-child {
-    padding: 55px 35px;
+    padding: 25px 25px;
     text-align: center;
     font-size: 22px;
     color: var(--primary);
@@ -464,10 +481,16 @@ p {
     padding-top: 15px;
 }
 
-.form h2 {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
+.form div h2 {
+    text-align: center;
+}
+
+form textarea {
+    font-family: var(--bodyFonts);
+    padding: 6px 0 0 15px;
+}
+form input::placeholder {
+    font-family: var(--bodyFonts);
 }
 
 form input:last-child {
@@ -609,6 +632,10 @@ footer {
 
 .findUs h5 {
     color: var(--white);
+}
+
+.findUs div {
+    margin-right: 5px;
 }
 
 .findUs div p {
@@ -855,6 +882,21 @@ footer {
 
 @media screen and (max-width: 576px) {
 
+     /* global */
+     h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    hr {
+        margin: 20px auto 8px;
+        height: 2px;
+        width: 120px;
+    }
+
     /* navBar */
     header nav ul {
         display: none;
@@ -1024,8 +1066,12 @@ footer {
         margin-bottom: 12px;
     }
 
+    .activeTrades {
+        text-align: center;
+    }
+
     .activeTrades h2 {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .cards div {
@@ -1070,7 +1116,7 @@ footer {
     }
 
     #awards p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .cfd h2 {
@@ -1092,7 +1138,7 @@ footer {
         transform: translateY(-50%);
         left: 5%;
         z-index: 1;
-        opacity: 0.5;
+        opacity: 0.1;
         border-radius: 60px;
     }
 
