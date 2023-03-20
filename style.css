@@ -514,7 +514,7 @@ form input:last-child {
 }
 
 .form article div {
-    flex: 0 0 30%;
+    flex: 0 0 45%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -522,11 +522,11 @@ form input:last-child {
 }
 
 .form article div img {
-    width: 90%;
+    width: 70%;
 }
 
 .form article form {
-    flex: 0 0 40%;
+    flex: 0 0 45%;
 }
 
 /* footer */
@@ -1136,6 +1136,7 @@ footer {
         z-index: 1;
         opacity: 0.1;
         border-radius: 60px;
+        width: 90%;
     }
 
     #contact article {
@@ -1144,16 +1145,18 @@ footer {
         justify-content: center;
     }
 
-    .logoContact {
-        display: none;
-    }
-
 
     #contact article form {
         width: 100%;
         z-index: 2;
         margin: auto;
+        flex: 0 0 40%;
     }
+
+    .form article div {
+        flex: 0 0 30%;    
+    }
+ 
 
     /* footer */
     .footer {

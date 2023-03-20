@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
   if(window.pageYOffset > 100) {
     toTop.classList.add('active');
   } 
-  if(window.pageYOffset > 0) {
+  if(window.scrollY > 0) {
     mobileNav.classList.remove('is-active');
     burger.classList.remove('is-active');
   } else {
