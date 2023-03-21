@@ -30,10 +30,30 @@ const burger = document.querySelector('.burger');
 const mobileNav = document.querySelector('.mobile-nav');
 
 
+
+
 burger.addEventListener('click', () => {
   burger.classList.toggle('is-active');
   mobileNav.classList.toggle('is-active');
 });
+
+
+
+let lastScrollY = window.scrollY;   // hide function same as Selltico mobile-app :)
+
+window.addEventListener('scroll', () => {
+  if(lastScrollY < window.scrollY) {
+    headerNav.classList.add('nav-hidden');
+  } else {
+    headerNav.classList.remove('nav-hidden');
+  }
+
+  lastScrollY = window.scrollY;
+
+});
+
+
+
 
 
 window.addEventListener('scroll', () => {

@@ -16,6 +16,7 @@
     --transitions: .4s linear;
     --fontSize: 18px;
     --lineHeight: 32px;
+
 }
 
 html {
@@ -90,7 +91,6 @@ Sticky navBar
 .headerNav.sticky {
     background-color: var(--primary);
     transition: .4s ease-in-out;
-    /* opacity: 0.9; */
 }
 
 .headerNav.sticky ul li a {
@@ -112,13 +112,20 @@ Sticky navBar
 
 nav.sticky span {
     background-color: var(--white);
-    border: 1px solid var(--black);
+}
+
+
+
+/* Nav Bar hidden - same as Selltico mobile-app */
+.headerNav.nav-hidden {
+    transform: translateY(-100px);
 }
 
 
 /* Header and NavBar */
 .burger {
     display: none;
+    box-shadow: none;
 }
 
 .headerNav {
@@ -129,6 +136,7 @@ nav.sticky span {
     position: fixed;
     width: 100%;
     z-index: 99;
+    transition: var(--transitions);
 }
 
 .headerNav img {
@@ -969,10 +977,13 @@ footer {
         margin-bottom: 5px;
         height: 4px;
         background-color: var(--primary);
-        border: 1px solid var(--white);
         border-radius: 6px;
         transition: 0.6s;
         transform-origin: 0 0;
+    }
+
+    .burger.is-active span {
+        background-color: var(--white);
     }
 
 
