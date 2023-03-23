@@ -83,9 +83,11 @@ hr {
     background-color: var(--accentsDark);
 }
 
+/* Weather widget */
+
 
 /* ******************
-Sticky navBar 
+Sticky navBar - Navigation
 ******************** */
 
 .headerNav.sticky {
@@ -117,12 +119,10 @@ nav.sticky span {
 
 
 /* Nav Bar hidden - same as Selltico mobile-app */
-.headerNav.nav-hidden {
+/* .headerNav.nav-hidden {
     transform: translateY(-100px);
-}
+} */
 
-
-/* Header and NavBar */
 .burger {
     display: none;
     box-shadow: none;
@@ -177,13 +177,11 @@ nav.sticky span {
     transition: var(--transitions);
 }
 
-.input {
-    position: absolute;
-    top: 30%;
-}
 
-.input span {
-    display: block;
+/* Header and NavBar */
+
+.weather {
+    margin: auto;
 }
 
 header {
@@ -198,11 +196,13 @@ header {
 header article {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
 }
 
-
-
-header article div:first-child h1 {
+header h1 {
     font-size: 80px;
     color: var(--primary);
     text-shadow: 1px 4px rgba(0, 0, 0, 0.3);
@@ -210,7 +210,7 @@ header article div:first-child h1 {
     font-weight: bold;
 }
 
-header article div:first-child h1 span {
+header h1 span {
     color: var(--accentsDark);
     text-shadow: 1px 5px rgba(0, 0, 0, 0.3);
     font-size: 90px;
@@ -219,19 +219,10 @@ header article div:first-child h1 span {
 
 }
 
-header article div:last-child {
-    flex: 35%;
-}
 
-/* Widget */
+/* CSS - Widget API needed*/
 
-.app-wrap {
-    position: absolute;
-    bottom: 25%;
-    left: 75%;
-}
-
-.header input {
+/* .header input {
     width: 100%;
     max-width: 280px;
     padding: 10px 15px;
@@ -287,7 +278,7 @@ header article div:last-child {
     font-size: 24px;
     font-weight: 300;
     text-shadow: 0px 3px rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* cards */
 .activeTrades {
@@ -730,17 +721,10 @@ footer {
         font-size: 60px;
     }
 
-    .input {
-        top: 15%;
-    }
 
-    /* widget */
-    .app-wrap {
-        bottom: 10%;
-        left: 50%;
-    }
+    /* CSS widget */
 
-    .header input {
+    /* .header input {
         width: 90%;
         font-size: 20px;
     }
@@ -756,7 +740,7 @@ footer {
 
     .current .hi-low {
         font-size: 22px;
-    }
+    } */
 
     /* cards */
     .cards div i {
@@ -820,17 +804,9 @@ footer {
         width: 70px;
     }
 
-    /* widget */
-    .app-wrap {
-        bottom: 12%;
-        left: 55%;
-    }
+    /* CSS widget */
 
-    .input {
-        top: 20%;
-    }
-
-    .header input {
+    /* .header input {
         width: 80%;
         font-size: 18px;
         padding: 8px 13px;
@@ -847,7 +823,7 @@ footer {
 
     .current .hi-low {
         font-size: 20px;
-    }
+    } */
 
     /* btn */
     .btn {
@@ -923,22 +899,15 @@ footer {
         justify-content: center;
     }
 
-    /* header */
-    .input {
-        top: 12%;
-    }
+    /* CSS widget */
 
-    .app-wrap {
-        bottom: 10%;
-    }
-
-    .header input {
+    /* .header input {
         font-size: 12px;
     }
 
     .current .temp {
         text-shadow: 1px 5px rgba(0, 0, 0, 0.4);
-    }
+    } */
 
     header article div:first-child h1 {
         font-size: 35px;
@@ -950,9 +919,11 @@ footer {
         text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
     }
 
-    /* .headerNav.sticky span {
-        background-color: var(--burger);
-    } */
+    header article {
+        flex-direction: column;
+        height: 70%;
+    }
+
 
 
     /* BURGER MENU */
@@ -1234,14 +1205,6 @@ footer {
         text-align: center;
     }
 
-    .header input {
-        font-size: 14px;
-    }
-
-    .input {
-        text-align: center;
-    }
-
     /* btn */
     .btn {
         padding: 8px 18px;
@@ -1260,16 +1223,6 @@ footer {
         border-radius: 26px;
         margin-bottom: 50px;
         letter-spacing: 2px;
-    }
-
-    .input {
-        top: 10%;
-        right: 2%;
-    }
-
-    .app-wrap {
-        bottom: 6%;
-        left: 30%;
     }
 
     /* cards */

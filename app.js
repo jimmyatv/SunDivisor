@@ -39,18 +39,18 @@ burger.addEventListener('click', () => {
 
 
 
-let lastScrollY = window.scrollY;   // hide function same as Selltico mobile-app :)
+// let lastScrollY = window.scrollY;   // hide function same as Selltico mobile-app :)
 
-window.addEventListener('scroll', () => {
-  if(lastScrollY < window.scrollY) {
-    headerNav.classList.add('nav-hidden');
-  } else {
-    headerNav.classList.remove('nav-hidden');
-  }
+// window.addEventListener('scroll', () => {
+//   if(lastScrollY < window.scrollY) {
+//     headerNav.classList.add('nav-hidden');
+//   } else {
+//     headerNav.classList.remove('nav-hidden');
+//   }
 
-  lastScrollY = window.scrollY;
+//   lastScrollY = window.scrollY;
 
-});
+// });
 
 
 
