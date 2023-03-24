@@ -70,16 +70,19 @@ h6 {
     color: var(--primary);
 }
 
-h2 {
-    font-size: 36px;
+
+
+.hr {
+    text-align: center;
+    font-size: 34px;
 }
 
-
-hr {
-    margin: 30px auto 10px;
-    border: none;
+.hr::after {
+    content: '';
+    display: block;
     height: 2px;
     width: 250px;
+    margin: 20px auto 15px;
     background-color: var(--accentsDark);
 }
 
@@ -180,9 +183,7 @@ nav.sticky span {
 
 /* Header and NavBar */
 
-.weather {
-    margin: auto;
-}
+
 
 header {
     background-image: url(./img/header1.jpg);
@@ -196,10 +197,12 @@ header {
 header article {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: absolute;
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
+    width: 80%;
 }
 
 header h1 {
@@ -217,6 +220,10 @@ header h1 span {
     display: block;
     padding: 10px 0;
 
+}
+
+.weather {
+    margin: auto;
 }
 
 
@@ -285,10 +292,6 @@ header h1 span {
     text-align: center;
     padding: 80px 15px;
     background-color: --wh;
-}
-
-.activeTrades hr {
-    margin-bottom: 20px;
 }
 
 .cards {
@@ -411,9 +414,9 @@ header h1 span {
     border-bottom: 1px solid var(--primary);
 }
 
-.ourAwards h2,
 .ourAwards h3 {
     text-align: center;
+    margin-top: 30px;
 }
 
 .ourAwards h2 {
@@ -425,9 +428,6 @@ header h1 span {
     padding: 100px 10px;
 }
 
-.ourAwards hr {
-    margin-bottom: 30px;
-}
 
 .ourAwards p:last-child {
     padding: 25px 25px;
@@ -702,16 +702,16 @@ footer {
         font-size: 70px;
 
     }
+
+    .weather {
+        margin: 100px auto 5px;
+    }
 }
 
 
 
 /* Responsive  992px */
 @media screen and (max-width: 992px) {
-
-    hr {
-        width: 220px;
-    }
 
     header article div:first-child h1 {
         font-size: 45px;
@@ -720,6 +720,16 @@ footer {
     header article div:first-child h1 span {
         font-size: 60px;
     }
+
+    .hr {
+        font-size: 32px;
+    }
+
+    .hr::after {
+        width: 200px;
+    }
+
+    
 
 
     /* CSS widget */
@@ -767,10 +777,6 @@ footer {
 /* Responsive  768px */
 @media screen and (max-width: 768px) {
 
-    hr {
-        width: 150px;
-    }
-
     /* global */
     h2 {
         font-size: 28px;
@@ -782,6 +788,14 @@ footer {
 
     p {
         font-size: 14px;
+    }
+
+    .hr {
+        font-size: 30px;
+    }
+
+    .hr::after {
+        width: 180px;
     }
 
     /* navBar */
@@ -863,18 +877,21 @@ footer {
 @media screen and (max-width: 576px) {
 
     /* global */
-    h2 {
-        font-size: 26px;
-        padding: 0 15px;
-    }
 
     h3 {
         font-size: 15px;
     }
 
-    hr {
-        margin: 20px auto 8px;
+    .hr {
+        font-size: 30px;
+    }
+
+    .hr::after {
         width: 120px;
+    }
+    
+    .container {
+        width: 98%;
     }
 
     /* navBar */
@@ -910,19 +927,19 @@ footer {
     } */
 
     header article div:first-child h1 {
-        font-size: 35px;
+        font-size: 40px;
         text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
     }
 
     header article div:first-child h1 span {
-        font-size: 55px;
+        font-size: 60px;
         text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
     }
 
-    header article {
+    /* header article {
         flex-direction: column;
         height: 70%;
-    }
+    } */
 
 
 
@@ -1136,9 +1153,9 @@ footer {
     }
 
     .form article div {
-        flex: 0 0 30%;    
+        flex: 0 0 30%;
     }
- 
+
 
     /* footer */
     .footer {
@@ -1191,6 +1208,11 @@ footer {
 @media screen and (max-width: 391px) {
 
     /* header */
+
+    header article div:first-child {
+        text-align: center;
+    }
+
     header article div:first-child h1 {
         font-size: 34px;
         text-align: center;
