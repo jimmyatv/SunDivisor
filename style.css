@@ -652,13 +652,12 @@ form textarea:focus {
 
 .footer article:first-child {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 20%;
 }
 
 .footer article:first-child img {
-    width: 200px;
+    width: 150px;
     margin-right: 40px;
 }
 
@@ -673,7 +672,7 @@ footer {
 
 .findUs {
     display: flex;
-    width: 70%;
+    width: 60%;
 }
 
 .findUs img {
@@ -826,6 +825,10 @@ footer {
     .footer article:first-child {
         flex-direction: column;
     }
+
+    footer article:first-child img {
+    margin: 0 0 50px 30px;
+}
 }
 
 /* Responsive  768px */
@@ -986,7 +989,7 @@ footer {
     }
 
     header article div:first-child h1 span {
-        font-size: 55px;
+        font-size: 50px;
         text-shadow: 1px 3px rgba(0, 0, 0, 0.3);
     }
 
