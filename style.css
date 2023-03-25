@@ -454,8 +454,8 @@ header h1 span {
 
 .ourAwards p:last-child {
     padding: 25px 25px;
-    text-align: center;
-    font-size: 16px;
+    text-align: justify;
+    font-size: 14px;
     color: var(--primary);
     font-style: italic;
 }
@@ -1161,6 +1161,10 @@ footer {
 
 
     /* awards */
+    .ourAwards {
+        padding-top: 50px;
+    }
+
     .awards img {
         width: 90px;
     }
@@ -1170,19 +1174,19 @@ footer {
         margin-bottom: 15px;
     }
 
-    #awards p {
-        font-size: 15px;
+    .cfd h3 {
+        padding: 0 15px;
     }
 
-    .cfd h2 {
-        margin-bottom: -20px;
-        font-size: 24px;
+    .cfd p {
+
     }
+
 
     /* contact section */
     #contact {
         position: relative;
-        padding: 180px 0;
+        padding: 110px 0;
         
 
     }
